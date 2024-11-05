@@ -7,13 +7,13 @@ import { ButtonModule } from 'primeng/button';
 import { MessageService } from 'primeng/api';
 import { ToastModule } from 'primeng/toast';
 import { RippleModule } from 'primeng/ripple';
-import { CommonModule } from '@angular/common'; // Importa CommonModule
+import { CommonModule } from '@angular/common'; 
 
 @Component({
   selector: 'app-view-pokemon',
   standalone: true,
   imports: [
-    CommonModule, // Asegúrate de incluir CommonModule
+    CommonModule, 
     HttpClientModule,
     InputTextModule,
     InputGroupModule,
@@ -23,7 +23,7 @@ import { CommonModule } from '@angular/common'; // Importa CommonModule
   ],
   providers: [PokemonService, MessageService],  
   templateUrl: './view-pokemon.component.html',
-  styleUrls: ['./view-pokemon.component.css'], // Corrige 'styleUrl' a 'styleUrls'
+  styleUrls: ['./view-pokemon.component.css'], 
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ViewPokemonComponent implements OnDestroy {
@@ -36,7 +36,7 @@ throw new Error('Method not implemented.');
 }
   pokemonNameOrId = signal('');
   loading = signal(false);
-  pokemonData = signal<any>(null); // Aquí se almacena la data del Pokémon
+  pokemonData = signal<any>(null); 
   animationArray = signal<string[]>([]);
   indiceActual = signal(0);
   animating = signal(false);
